@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown("space") && !airborne)
         {
-            // airborne = true;
+            airborne = true;
             transform.GetComponent<Rigidbody>().AddForce(transform.up * jump_force, ForceMode.Impulse);
         }
     }
@@ -48,6 +48,14 @@ public class PlayerController : MonoBehaviour
         else
         {
             camera_transform.rotation *= Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * vertical_sensitivity, Vector3.right);
+        }
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.name == "Planet")
+        {
+            airborne = false;
         }
     }
 }

@@ -149,7 +149,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 334339710}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -416,8 +416,8 @@ GameObject:
   - component: {fileID: 1560976413}
   - component: {fileID: 1560976412}
   - component: {fileID: 1560976417}
-  - component: {fileID: 1560976416}
   - component: {fileID: 1560976418}
+  - component: {fileID: 1560976416}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -542,6 +542,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dde69f71ef14e794fba3bbdd473c1437, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jump_force: 15
   move_speed: 15
   horizontal_sensitivity: 10
   vertical_sensitivity: 5
